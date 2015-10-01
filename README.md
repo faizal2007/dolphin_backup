@@ -9,6 +9,8 @@
 ## Usage
    * sudo su or su
    * chmod +x adhoc.sh
+   * Do set all db that you don't require for this operation
+       * conf/ignore.list
    * ./adhoc.sh
 
 ## Warning
