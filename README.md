@@ -19,8 +19,11 @@
    * This script are not for archiving
    * This script will override all file inside backup folder
    * Do backup all file inside backup folder before proceed
-   * 
 
+## Tested
+   * Only on debian
+   * Feel free to share your experiences
+   
 ## Future update 
    * backup restore all from backup folder
    * backup restore selected db
