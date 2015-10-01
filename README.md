@@ -19,3 +19,10 @@
    * This script are not for archiving
    * This script will override all file inside backup folder
    * Do backup all file inside backup folder before proceed
+   * 
+
+## Future update 
+   * backup restore all from backup folder
+   * backup restore selected db
+   * backup from remote access
+   * option to archived backup before override
