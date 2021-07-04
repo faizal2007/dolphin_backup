@@ -1,3 +1,4 @@
+conf/db.list
+conf/my.cnf
 /backup/
 /archives/
-/archives/*

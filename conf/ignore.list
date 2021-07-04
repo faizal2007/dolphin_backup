@@ -1,5 +1,4 @@
 information_schema
+performance_schema
 mysql
-tungsten_alpha
-tungsten_bravo
 test
