@@ -1,5 +1,11 @@
 # Dolphin Backup Tools
     Common operation script for mysql backup
+## Features
+* Backup all db per file (adhoc.sh)
+* Restore all db (restore.sh)
+* Archive db (archive.sh)
+
+
 ## Requirement
    * require root access for adhoc.sh 
    * root folder need to be writable 
@@ -7,20 +13,29 @@
    * require mysql client
 
 ## Usage
-   * sudo su or su
-   * chmod +x adhoc.sh
-   * set username and password
-       * conf/my.cnf 
-   * Do set all db that you don't require for this operation
-       * conf/ignore.list
-   * ./adhoc.sh
+### setup
+```bash
+sudo su
+git clone https://github.com/faizal2007/dolphin_backup.git
+cd dolphin_backup
+```
+#### Backup all db
+```bash
+chmod +x adhoc.sh
+./adhoc.sh
+```
+#### Archives all db
+```bash
+chmod +x archive.sh
+./archive.sh
+```
+### Restore all db
+```bash
+chmod +x restore.sh
+./restore.sh
+```
 
 ## Tested
    * Only on debian
    * Feel free to share your experiences
    
-## Future update 
-   * backup restore all from backup folder
-   * backup restore selected db
-   * backup from remote access
-   * option to archived backup before override
