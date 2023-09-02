@@ -15,7 +15,13 @@ DIR="$(dirname $0)"
 CONF="$DIR/conf"
 BACKUP_FOLD="$DIR/backup"
 ARCHIVE_FOLD="$DIR/archives"
-COPY=6
+
+if test -e ./conf/app.cnf; then
+    source ./conf/app.cnf
+else
+    COPY=6
+fi
+echo $COPY
 
 # start moving backup file to archive folder 
 if [ -d "$BACKUP_FOLD" ]; then
