@@ -15,6 +15,7 @@ DIR="$(dirname $0)"
 CONF="$DIR/conf"
 BACKUP_FOLD="$DIR/backup"
 ARCHIVE_FOLD="$DIR/archives"
+COPY=6
 
 # start moving backup file to archive folder 
 if [ -d "$BACKUP_FOLD" ]; then
@@ -25,3 +26,13 @@ else
 	echo "Start doing fresh backup .."
 	$DIR/adhoc.sh
 fi
+
+
+cd $ARCHIVE_FOLD
+# loop for folder to compressed and remove
+for folder in $(ls -1 | grep -E -v '\.'); do
+  tar -cvjf "$folder.tar.bz2" "./$folder"
+  echo "compressed $folder.tar.bz2"
+  rm -rvf "./$folder"
+done
+OLD_FILES=`ls -t | sed -e '1,'${COPY}'d'| xargs -d "\n" rm -rvf `
