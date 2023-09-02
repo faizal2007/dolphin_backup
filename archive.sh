@@ -21,7 +21,6 @@ if test -e ./conf/app.cnf; then
 else
     COPY=6
 fi
-echo $COPY
 
 # start moving backup file to archive folder 
 if [ -d "$BACKUP_FOLD" ]; then
