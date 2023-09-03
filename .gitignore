@@ -3,3 +3,4 @@ conf/my.cnf
 /backup/
 /archives/
 conf/app.cnf
+conf/ignore.list
